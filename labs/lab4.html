@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title>Towed Car Data </title>
+    </head>
+    <body>
+        <h1>Towed Car Data</h1>
+        <button id="submit">Submit</button>
+        <div id="results"></div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <script>
+            var towedVehicle;
+           
+            $(function(){
+                
+                $("#submit").click(function(){
+                    
+                    var html = "";
+                    
+                    // base URL to the food inspections data
+                    var baseURL = 'https://data.cityofchicago.org/resource/rp42-fxjt.json';
+                    
+                    // optional filters we're appending - date range and zip
+                    var filters = "";
+                    
+                    // full URL
+                    var url = baseURL;
+                        
+                    $.getJSON(url).done (function (data) {
+                        // TODO:  add script to add data to the DOM
+                        console.log(data);
+                        // loop through the records
+                        
+                        towedVehicle = data;
+                        
+                        var date = towedVehicle[0].tow_date;
+
+                        var blk = 0, whi = 0, gry = 0, sil = 0, grn = 0, blu = 0, red = 0, oth = 0;
+                        
+                        if(towedVehicle.length == 0){
+                            html = "No Vehicle Reported";
+                        } else{
+                            $.each(towedVehicle, function(index, value){
+                                if(value.tow_date == date){
+                                    var col = value.color;
+                                    if (col == "BLK")
+                                        blk++;
+                                    else if(col == "WHI")
+                                        whi++;
+                                    else if(col == "GRY")
+                                        gry++;
+                                    else if(col == "SIL")
+                                        sil++;
+                                    else if(col == "GRN")
+                                        grn++;
+                                    else if(col == "BLU")
+                                        blu++;
+                                    else if(col == "RED" || col == "MAR")
+                                        red++;
+                                    else
+                                        oth++;
+                                }
+                            })  
+                            
+                        
+                          google.charts.load('current', {'packages':['corechart']});
+                          google.charts.setOnLoadCallback(drawChart);
+                          function drawChart() {
+                            var data = new google.visualization.DataTable();
+                            data.addColumn('string', 'Car color');
+                            data.addColumn('number', 'Quantity');
+                            data.addRows([
+                              ['Black', blk],
+                              ['White', whi],
+                              ['Grey', gry],
+                              ['Silver', sil],
+                              ['Green', grn],
+                              ['Blue', blu],
+                              ['Red', red],
+                              ['Other', oth]
+                            ]);
+                    
+                            var options = {'title':'Towed cars by color on ' + date,
+                                           'width':400,
+                                           'height':300};
+                    
+                            
+                            var chart = new google.visualization.PieChart(document.getElementById('results'));
+                            chart.draw(data, options);
+                          }
+                        }
+                        
+                       
+                        
+                    })
+                    
+                })  
+                
+            })
+            
+            
+        </script>
+    </body>
+</html>
