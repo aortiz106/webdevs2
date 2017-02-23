@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title>Towed Car Data </title>
+    </head>
+    <body>
+        <h1>Towed Car Data</h1>
+        
+        <div id="results"></div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <script>
+            var towedVehicle;
+           
+            $(function(){
+                
+                $("#submit").click(function(){
+                    
+                    var html = "";
+                    
+                    // base URL to the food inspections data
+                    var baseURL = 'https://data.cityofchicago.org/resource/6zsd-86xi.json';
+                    
+                    // optional filters we're appending - date range and zip
+                    var filters = "";
+                    
+                    // full URL
+                    var url = baseURL;
+                        
+                    $.getJSON(url).done (function (data) {
+                        // TODO:  add script to add data to the DOM
+                        console.log(data);
+                        // loop through the records
+                        
+                        primary_type = data;
+                        
+                        
+
+                        var theft = 0, robbery = 0, battery = 0, narcotics = 0, assault = 0, bruglary = 0, arson = 0, oth = 0;
+                        
+                        if(primary_type.length == 0){
+                            html = "None";
+                        } else{
+                            $.each(primary_type, function(index, value){
+                                if(value.primary_type){
+                                    var type = value.primary_type;
+                                    if (type == "THEFT")
+                                        theft++;
+                                    else if(type == "ROBBERY")
+                                        robbery++;
+                                    else if(type == "BATTERY")
+                                        battery++;
+                                    else if(type == "NARCOTICS")
+                                        narcotics++;
+                                    else if(type == "ASSAULT")
+                                        assault++;
+                                    else if(type == "BURGLARY")
+                                        burglary++;
+                                    else if(type == "ARSON")
+                                        arson++;
+                                    else
+                                        oth++;
+                                }
+                            })  
+                            
+                        
+                          google.charts.load('current', {'packages':['corechart']});
+                          google.charts.setOnLoadCallback(drawChart);
+                          function drawChart() {
+                            var data = new google.visualization.DataTable();
+                            data.addColumn('string', 'Car color');
+                            data.addColumn('number', 'Quantity');
+                            data.addRows([
+                              ['THEFT', theft],
+                              ['BURGLARY', burglary],
+                              ['BATTERY', battery],
+                              ['NARCOTICS', narcotics],
+                              ['ASSAULT', assault],
+                              ['ROBBERY', robbery],
+                              ['ARSON',arson],
+                              ['Other', oth]
+                            ]);
+                    
+                            var options = {'title':'Towed cars by color on ' + date,
+                                           'width':400,
+                                           'height':300};
+                    
+                            
+                            var chart = new google.visualization.PieChart(document.getElementById('results'));
+                            chart.draw(data, options);
+                          }
+                        }
+                        
+                       
+                        
+                    })
+                    
+                })  
+                
+            })
+            
+            
+        </script>
+    </body>
+</html>
