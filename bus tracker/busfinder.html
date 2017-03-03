@@ -2,43 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>jQuery.parseXML demo</title>
+  <title>bus tracker</title>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <style>
+   #title {
+    color: #0099ff;
+}
+  #text {
+    color: #0099ff;
+  }
+  
+  #div{
+    border-style: solid;
+    color: #0099ff;
+    
+  }
+  
+.button {
+    background-color: #0099ff;
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #0099ff;
+}
+</style>
+<script>
+</script>
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-light_blue.min.css" />
+  
 </head>
 <body>
-
- 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script>
-        $(function() {
-          
-          
-          var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
-          
-          var apiEndpoint = "http://ctabustracker.com/bustime/api/v2/getroutes";
-          
-          
-          $.ajax({
-              url: apiPassThruUrl,
-              dataType: "json",
-              method: 'GET',
-              data: {"apiEndpoint": apiEndpoint,
-                      "key" : "<your Bus Tracker API key",
-                      "format":"json"}
-            }).done (function (data) {
-              console.log(data);
-              $("body").append("<h1>Bus Routes</h1>");
-             
-              $.each(data["bustime-response"]["routes"], function(i,v) {
-                  $("body").append("Route #" + v.rt + ", " + v.rtnm + "<br>");
-                
-              })
-
-            });
-        });
-            
+    
+<center>
+<h1 id= title>CTA BUS TRACKER</h1>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="busfinder2.html">Tracker</a></li>
   
-</script>
- 
+</ul>
+ <div id = "div"> </div>
+ <div id = "div2"></div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</center>
+  <center>
+     
+
+</center>
 </body>
 </html>
