@@ -8,3 +8,43 @@
         <p>working with GitHub</p>
     </body>
 </html>
+ <script>
+        function findbus() {
+    $(function() {
+        
+      var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
+
+      var apiEndpoint = "http://www.ctabustracker.com/bustime/api/v2/getpredictions";
+      
+      var rt;
+          if ($("#selector").val() == "8417", "8195") {
+            rt = "49";
+          }
+          else {
+            rt = "152";
+          }
+
+      $.ajax({
+        url: apiPassThruUrl,
+        dataType: "json",
+        method: 'GET',
+        data: {
+          "apiEndpoint": apiEndpoint,
+          "key": "RVehUg4BC2bGGFHGEQMSv3dhE",
+          "format": "json",
+          "rtnm": rt,
+          "stpid": $("#selector").val(),
+        }
+
+      }).done(function(data) {
+        console.log(data);
+
+        $.each(data["bustime-response"]["prd"], function(i, v) {
+
+          $("#buses").append("<div>Destination: " + "<br>" + v.des + "<br>" + " Route Direction: "+ "<br>" + v.rtdir + "<br>" + " Predicted Time to Arrival: " + "<br>" + v.prdctdn + " minutes to go" + "<br><br></div>");
+
+        });
+
+      });
+    });
+}
