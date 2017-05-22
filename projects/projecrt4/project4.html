@@ -4,11 +4,19 @@
    <html>
   <head>
     <!-- Material Design Lite -->
+     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <style>
+      p{
+          font-size: 30px;
+      }
+      li{
+          font-size: 20px;
+      }
           .screen {
               display: none;
           }
@@ -40,7 +48,7 @@
       </div>
       <main class="mdl-layout__content">
         <div id="screen1" class="screen page-content"><h1>Dice Roller</h1>
-        <p>this page is a dice roller, this page was designed for playing dungeons and dragons but can be used for other rpgs (dice only, the rest is DnD specific)</p> 
+        <p>This page is a dice roller, this page was designed for playing dungeons and dragons but can be used for other RPGs. I have also added in a story maker for Call of Cthulhu and for Dungeons and Dragons. I hope you enjoy this site and find it useful</p> 
         <head>
         <title>dice roller</title>
         <style>* {
@@ -219,9 +227,15 @@ button100.onclick = function() {
         </body>
         
         </div>
-        <div id="screen2" class="screen page-content"><h1>Story Plot Points and Hooks</h1>
-        <p>ever have trouble coming up with an idea for your next story, have no fear. Simple roll a D100 and find a new story hook (hooks from the Dungeons and Dragons wiki)</p>
+        <div id="screen2" class="screen page-content">
+          <head>
+            <style>
+              
+            </style>
+          </head><h1>Story Plot Points and Hooks</h1>
+        <p>Ever have trouble coming up with an idea for your next story/Campaign. Have no fear. Simple roll a D100 and find a new story hook (hooks from the Dungeons and Dragons wiki, Thanks to the community.)</p>
         <center>
+          
         <ol>
           <li id= "DND1">Vistaru, Lord of the Mountain, is attacking small towns surrounded by his kingdom in hopes of expanding his army before his assault on the capital.</li>
           <li id= "DND2">Locals hear chants in the nearby ruins.</li>
@@ -323,22 +337,270 @@ button100.onclick = function() {
           <li id= "DND98">A party member's armor comes to life and tries to leave.</li>
           <li id= "DND99">A party member discovers a great sword made of red metal that has the properties of adamantine, mithril, silver and cold iron, but can be wielded in one hand as if it were a long sword. What is it ?</li>
           <li id= "DND100">A tribe of trolls is trying to make peace with a nearby village.</li>
-          
-        </ol>
+                  </ol>
+        <script>
+       function display(){
+       
+       function myFunction() {
+    var x = document.getElementById("displayDnD")
+    x.innerHTML = Math.floor((Math.random() * 100) + 1);
+}
+}
+</script>
         </center>
         </div>
         <div id="screen3" class="screen page-content"><center><h1>About Me and This Page</h1>
         <h2>About Me</h2><p>Hello, my name is Alejandro Ortiz, and i am the programer of this site. I decided to make this site for a friend of mine (and for myself). both of us are big fans of RPGs particularly "Dungeons and Dragons". this page was done to be used with Dugeons and Dragons. it is simple project (less than 400 lines of code) and was fairly fun to do. Thanks for DMing Dungeons and Dragons for us Zane and keeping up with all the crazy senarios we put you through<br>
-        </p> <img src= ""> <h2>About This Project</h2><p>When I started this project I thought i would have more time. The deadline caught up with me quickly and before I knew it, it was due monday. I did eventually get the program working and i was pretty proud of the results and suprized how well it came out looking. I did have to work out some minor problems (okay they might not have been that minor, or easy to solve but nothing a good cup of coffe and determination couldn't fix) and eventually I had finally completed I project I was proud of. That's most of the story of how this page came to be, it was difficult but ot was fun and worth the expirience (like playing "dark souls" but with less giving up.) </p> </center>
+        </p> <img src= ""> <h2>About This Project</h2><p>When I started this project I thought i would have more time. The deadline caught up with me quickly and before I knew it, it was due monday. I did eventually get the program working and i was pretty proud of the results and suprized how well it came out looking. I did have to work out some minor problems (okay they might not have been that minor, or easy to solve but nothing a good cup of coffe and determination couldn't fix) and eventually I had finally completed I project I was proud of. That's most of the story of how this page came to be, it was difficult but it was fun and worth the expirience (like playing "dark souls" but with less giving up.) </p> </center>
         </div>
       <div id="screen4" class="screen page-content">
         <html>
           <head>
-            <title>Call Of Cthulhu</title>
-          <P>This page is for a senario Generator for The Call Of Cthulhu RPG (by chaosium) this works the same as the DnD story creator if needed there is a number picker for you ease</P>
+            <title>Call Of Cthulhu</title><h1>Pllots and Hooks (Call Of Cthulhu)</h1>
+          <P>This page is for a senario Generator for The Call Of Cthulhu RPG (by Chaosium) this works the same as the DnD story creator <br>Call of Cthulhu is an RPG based off of the writings of H.P Lovecraft and the Cthulhu Mythos that he had created. many of these senarios much like the DnD story generator expect you to know at least a bit of the Cthulhu Mythos and story behind some of Lovecraft's writing and knowing bits of the mythos such as "The Yellow Sign", "Delta Green", "The King In Yellow", "Cthulhu", "The Hound", and "The Necronomicon" (Once again thank you the the community espessially the Yog-Sothoth forum where many of these came from, there is also some of my personal ideas for stories later in my current campaign)</P>
+          
           <ol>
-            <li>you have inherited a mansion from your uncle, things become strange when sounds</li>
+             
+            <li id= "CoC1">you have inherited a mansion from your uncle, things become strange when sounds</li>
+            <li id= CoC1> Your grandfather was a stage magician whose greatest trick was to apparently cheat death
+again and again; bullets apparently bounced off him, a poisonous snake bit him, he stayed 
+underwater in chains for huge lengths of time, and was stabbed through with swords while inside a
+box. When he actually dies, he leaves you his secrets in his will. It wasn't a trick.</li>
+          <li>A vampire is on the loose.</li>
+          <li>As actors prepare to perform a play called The Yellow King, they start to disappear one by
+one.</li>
+          <li>You have a friend who is a genius, with ideas years ahead of his time. He also has an odd
+golden device under his desk, which he uses to talk to the Yithians.</li>
+          <li> As actors prepare to perform a play called The Yellow King, they start to disappear one by
+one.</li>
+          <li> People start dying. The common factor: they all recieved organs from the same donor postmortem.
+Guess what was missing from the bodies?</li>
+          <li>You run over someone in your car. He is wearing clothes from hundreds of years ago.</li>
+          <li>A friend who you have not seen in several months calls and asks for your help. He has come
+across a big story (he is a writer) and he wants you to get together an investigative team. Your
+friend sounds very nervous and a bit off his rocker. Later you meet at his hotel room only to find
+your friend murdered in some strange ritualistic manner.</li>
+          <li>Investigator arrives home. It is dark. When the light is turned on, a man is dead. His chest is
+burnt and bloodied. All mirrors in the house are missing. The man reeks of fish. He clutches two
+things, one in each hand: A sepia picture of a young Victorian lady and a leather volume entitled
+Othuum Omnicia.</li>
+          <li>A man dies in town jumping under a tram. A man is arrested because in a heated discussion he
+told the man to "Go jump under a tram". Witnesses say the dead man looked like he was in a
+trance. The other man is charged with being a suspected hypnotist. He is due to hang and he
+swears his innocence! Why did the man do as he was told?</li>
+          <li> While exploring a cave on an overnight trip, you and your friends hear a fluttering sound
+echoing through the cave. Following the sound, you see a small rodent creature with what looks
+like tentacles around its snout. Following as it scurries away, you find yourself exiting through an
+unknown opening into a misty wooded area. (Dreamlands)</li>
+          <li> An investigator (or several) witness a brutal murder in broad daylight, however are unable to
+intervene. (Perhaps they view from a moving bus, from a window across the street, ect.) No one
+else notices. The investigators later discover the killer is paralyzed, blind, and a mute.</li>
+          <li> Someone gives/lends/asks you to research a clock.
+The clock in question resembles a Grandfather clock. Ornately carved in wood and inset with semiprecious
+stones. It has a fairly mundane face, but has many other dials inset in it and around it.
+These have hands, and pointers, that all turn and oscillate. Cogs and levers and mechanism can
+be seen behind the hands. It ticks and whirrs erratically.
+The clock chimes at irregular intervals and with several different chimes. Some quiet, some loud,
+some in frequencies beyond normal hearing.However, when the case is opened, it is almost completely empty. There isn’t even a mechanism
+for winding it.What is the purpose of the clock? Who owns it? How does it work? That’s for you to find out dear
+investigator.</li>
+          <li>ou are researching the latest Mythos artifact, while the sound of rain lashes the windows. 
+When you get up to look, there is no rain, and hasn’t been for hours. Something else is dripping
+from your rooftop.</li>
+          <li>Due to global warming or a recent warm winter, the glaciers are melting at an increased rate.
+Hideous creatures trapped in the ice for millennia are dumped into the sea where they start to
+defrost. At first they are a danger to shipping, then to coastal towns.</li>
+          <li>You have received some phone calls that seemed like death threats. Later, you find out they
+were actually warnings.</li>
+          <li>You car breaks down in the middle of nowhere. A few minutes later a weird old lady drives by
+and offers you a lift.</li>
+          <li>Years ago, at the investigator's high school science fair, a
+strange young man named Melvin tried to resurrect a popular cheerleader who recently died in a
+car wreck. Years later, after being released from the asylum, Melvin has discovered the secret to
+resurrecting the dead, and has a deadly obsession with the investigator. (based on a Richard Layman book.)</li>
+          <li>A new horror film has come out and everyone is telling you how scary it is. You go to see it
+and it's one of the most terrifying experiences of your life, the monsters just looked so real!</li>
+          <li>There's a new society at your university for a religion you've never heard of. People who go to
+the meetings come back very different.</li>
+          <li>Reverse Locked-Room Mystery: You have to find evidence that someone accused of a crime
+is innocent, but it seems impossible that they DIDN'T do it once you start interviewing witnesses
+and examining evidence. Is someone using supernatural means to frame them?</li>
+          <li> You are travelling by plane. A star-vampire materialises in the cabin, and starts sucking the life
+out of the passengers. If it makes it forward to the pilot, you’re all going to die. Can you and your
+fellow investigators dismiss the beast with only an in-flight magazine and a few bits of plastic
+cutlery?</li>
+          <li> A prisoner escapes from his cell during the night. There is no way that he could leave through
+thick walls and iron bars and security. There is an old book, a funny smell and a dirty smudge on
+the cell wall the in the shape of a 6’ triangle. Time to look into the mystery…</li>
+          <li> You're working late in the hospital one night, when you happen to glance out the window and
+catch sight of lights burning on the top floor of a building you know has been closed as structurally
+unsafe.</li>
+          <li>A drunken former military man in a bar claims that the casualties during the attack on Omaha
+beach/Gallipoli during WWII/WWI (delete as appropriate to era) weren't caused by defensive gun
+emplacements but something else (insert wierdstuff here).
+He is brutally murdered in the car park but afterwards the players find as he died he dropped a
+package of incriminating photos under/near their car..</li>
+          <li>There is a train accident. The carriage in which the PCs sit is completely smashed/squashed
+flat, yet they walk out alive...</li>
+          <li>The old woman who lives upstairs from one of the PC's, a recent stroke victim, divulges
+information beyond her ken in the middle of mundane sentences. She has no power/knowledge of
+these other words she speaks they are not only portentious but disturbing and coming true.</li>
+          <li> A university offers you and a few other insomniacs money in exchange for some participation
+on a sleep study. Later you find that sleeping isn't the trouble, but waking up is.</li>
+          <li>A wave of narcolepsy has overtaken the sanitarium where you and your colleges work while
+the halls have become filled with stalking nightmares at night.</li>
+          <li> While working in the morgue, a cadaver with a macabre rune carved into the skin of its
+forehead suddenly sits bolt upright. The player character passes out, wakes to find no trace of the
+body, and proceeds to investigate where this so-called body came from. Was it truly dead? Was it
+merely (hopefuelly) imagined? Or could it be something darker...</li>
+          <li>You get lost outside of Tijuana in the dead of night on Los Díos De Los Muertos.</li>
+          <li>Your university professor vanishes after publishing his paper on non-Euclidean physics.</li>
+          <li>Someone sends you tickets to a new show in town "Monarco Amarillo". It's got rave reviews
+among the critics and art-house community, so you invite your friends...
+It's actually a Spanish production of "The King in Yellow". Those that remain sane at the end are
+intent on finding the "Yellow Sign" and pledging alliegance to "He who is not to be Named".</li>
+          <li> You and your office colleagues find yourselves more and more depleted after a series of
+strangely similar dreams, culminating in an office party beyond the walls of sleep</li>
+          <li>You injure yourself at work. Nothing to serious. However you can't help but pick at the scar
+around the injury. While picking, a sheet of skin peels of your arm revealing grey, dead necrotic
+tissue underneath. Tiny worms crawl around inside this newly revealed flesh.</li>
+          <li>A thunderstorm is alive.</li>
+          <li>You died, and now you are a ghost. Bring your murderer to justice!</li>
+          <li> Ships are vanishing at sea. A final radio broadcast from one says something like 'Ia! Ia! Cthu-'</li>
+          <li>The same person appears in every photo you take, whether they were present in the scene or
+not.</li>
+          <li> There's a wild party somewhere around your neighborhood, police is called in but the cop
+cars just remain outside the house and policemen aren't anywhere in sight.</li>
+          <li>You read the following headline: "Portal to Mayan underworld found in Mexico?"</li>
+          <li>A severed limb is washed ashore. It is forensically identified as belonging to a fully-limbed
+investigator.</li>
+          <li>A young and healthy woman passes out in the street. As someone gives first aid, they notice a
+strange wound on her chest. Someone in the crowd makes a fast exit into the park. The chase is
+on! Meantime the young lady is gibbering about the trees being alive....</li>
+          <li>You and a group of friends are camping in a forrest in Northern Michigan when the power runs out and you are being hunted. </li>
+          <li> You decide to take some R&R with your friends, so you enroll on a treasure hunt around your
+hometown. As you gather clues, it all adds up to something sinister. Did the question-setter know
+this? Or is it a coincidence? Once all the clues are in, someting happens. If you join the dots what
+happens then? Did someone switch clues leading you into someplace you'd rather not go?</li>
+          <li> Someone offers you a whole lot of cash just to photocopy a few pages from a book in the
+university library. How hard can it be? Until the librarian starts acting very strange when he/she
+catches you at it.</li>
+          <li> Someone offers to interpret their dreams.</li>
+          <li>The investigators are touring Europe, when they hear about / discover a big black monolith.</li>
+          <li>The investigators are invited to stay the night in a haunted library, and told not to read any
+books that start with an "N"</li>
+          <li> A ship goes missing in the Atlantic somewhere, dubbed "The New Titanic" as the last report
+details a large iceberg in the distance, and the sea being like blood. The characters must journey
+to recover the ship and it's passangers, or what's left of them, from what turns out to be Rlim
+Shaikorh's slowly melting tomb of ice.</li>
+          <li>A dying man that has been terribly lacerated is found lying on the beach on the upper
+peninsula of Michigan. His last words:
+"Blood-black... and... cold, dead hands... I would'n' come... heard it call m' name... ssssss'aa c-ccomin'...
+wind... wend... windigoooooo... kill... coooommmme...."</li>
+          <li>An
+irritating yet catchy new ringtone is spreading like wildfire among children and adults alike, and
+you can't walk down the high street without hearing it at least once. To the ears of a select few,
+however, this tone and the advertisment for it speak of a great evil behind the Jamming! ringtone
+giant.</li>
+          <li> A bomb goes off in a hotel. Running out of the wreckage is a man totally aflame clutching a
+gigantic, thin book that will not burn. It is filled with large, colour and black-and-white photographs
+of paintings and sculpture from an obscure Surrealist exhibition from the 1950's, along with photos
+of the artist presenting their work or just hanging out. The burning man is identified as the publisher
+of the book, printed 1969, which seems amazingly new; The pages are still glossy, lacking even
+the faintest fingerprints, and the pictures are incredibly clear. However, few art critics recognise the
+names of the artists. The whole thing is quite extraordinary, since not only are the pieces some of
+the most brilliant and avant-garde examples of the genre, but all the contributers, members of an
+esteemed company of former artists, disappeared, were presumed dead, or commited suicide
+by December 31st, 1949.</li>
+          <li>Azathoth is waking up</li>
+          <li>A group of researchers investigating strange strange occurrences of sub-aquatic life when they come across a underwater city. They explore thinking it was The Lost City of Atlantis, they soon realize it is something much worse (the gates of R'lyeh are open.)</li>
+          <li>After his death in 1930 people have reported seeing Lon Chaney in the movie studio where he had filmed 1925. The thing all reports share us the fact that they had seen him with his mask and cape. Could this all be a hoax or is Lon Chaney reprising his role as "The Phantom Of The Opera"</li>
+          <li>All the investigators electrical goods go haywire and try to kill them</li>
+          <li> A Parrot is found staring madly at people and shouting "Tekeli-li! Tekeli-li!" Its droppings begin
+to form a strange sign on its cage, and strangely it survives the fire that kills its owners. After
+becoming an unfortunate local celebrity, it attracts the attention of a strange cult.</li>
+          <li> You rent an Unsolved Mysteries DVD and while watching Robert Stack talk about "The
+mysterious Woman of Pamplona" you see in the background your relative/friend/former professor
+who disappeared under mysterious circumstances years before.</li>
+          <li>. "It's not a god, Higgins. It's a weapon"- or so claims the exhausted and obviously deranged
+man who has just accosted you on the street, evidently having confused you with someone else.
+Before he can elaborate, he is shot by an assailant who melts invisibly into the crowd with almost
+inhuman speed. Who is Higgins? What did the man mean? Why was he shot? What will you do
+when the Police arrive?</li>
+          <li>Cultists kidnap your friend and demand a powerful occult artifact as the ransom</li>
+          <li>You wake up with no memory of the past three days. You had weird dreams of robed figures
+and skulls while asleep.</li>
+          <li>You find a book. It has an infinite number of pages. None of them are nice</li>
+          <li> Legend has it there's a lost chamber hidden somewhere in the castle.</li>
+          <li> Before his death, an occultist left two coded messages, claiming he would prove the reality of
+life after death from beyond the grave by transmitting the keys to decode them. One of them is
+decoded somehow; it's a terrible warning of the coming apocalypse, and it's true.</li>
+          <li> While opening an ancient Mayan tomb a strange green gas pours out, knocking everyone
+unconscious. Before you pass out something hits you as it rushes OUT of the now unsealed tomb.
+When you wake up about 1/3rd of the research team is missing without a trace and strange
+vanishing begin in the area villages.</li>
+          <li>You find a manuscript describing a house.</li>
+          <li> A spell gone awry has fractured time. The world is full of time portals and only you can save
+the day, but first you must travel history to find the cure.</li>
+          <li>There's a sudden fashion for a strange tattoo, apparently the Polynesian symbol of sanctity.
+Then people who got it start disappearing.</li>
+          <li>A ghost leaves messages begging for help.</li>
+          <li>. A farmer disappears after planting an unusual crop.</li>
+          <li>This new TV show has started and you really like it, it's pretty much your perfect TV show. It's
+like the writers know what you're thinking! Strangely, none of your friends have heard of it. They've
+all started watching TV shows they love that no one else has heard of as well. And everyone is
+having these terrible nightmares...</li>
+          <li> Your friend just hasn't been the same since he mysteriously disappeared and then
+reappeared a few months ago. He seems almost... alien.</li>
+          <li>You are invited to go to a Ghost Town tour. You visit interesting places such as Centralia, PA.
+Your next stop is somewhere in Massachusetts called "Dunwich".</li>
+          <li>Rats start to turn up with strange deformities of the skull, almost resembling human faces.</li>
+          <li> You open your eyes and the sun is shining through your window, the breeze blows gently and
+the curtains sway. It's the start of a beautiful day... only... the view out your window reveals every
+building in town has seemingly vanished, except for the church, which now appears hundreds of
+years in decay. Something inside catches your eye, flashing brightly in the morning sun....</li>
+          <li>The characters begin to hear the GM and Players saying exacly what they are saying and thinking and  telling them to roll dice. (no one else notices)</li>
+          <li>They dream of sacrifices to hideous gods, only to read about it in the papers the following
+morning.</li>
+          <li>Someone sends them a warning to “Leave town and never return” Are they brave enough to
+stay and find out why?</li>
+          <li>They return home to find a break-in. Nothing is missing, but there is slimy residue all around the
+house.</li>
+          <li>Classic costumes for Universal mosnters have gone missing and strange crimes are being commited in the same fashion </li>
+          <li> Gradually, you notice that animals in your area are starting to disappear. the birds are the first
+to go, and flying insects; perhaps you notice entire colonies of ants on the move, desperately
+fleeing...something. Indoors, flies pound themselves to death frantically trying to escape through
+closed windows, and your dog is hiding under the bed with his tail between his legs. What gives?</li>
+          <li>Frankenstine's nephew tries to take off where his uncle left off</li>
+          <li>a mummy disappears from a display case</li>
+          <li>a cultist vanishes from prision overnight</li>
+          <li>crimes are being commited by some invisible force</li>
+          <li>Dracula re-awakens</li>
+          <li>the whole town is secretly a werewolf community</li>
+          <li>hunting down an urban legend (Jersey Devil, The Hook-Man, Bloody Mary, etc</li>
+          <li>a towns enhabitants disappear overnight</li>
+          <li>the anger over an election wakes up a long dead god of anger</li>
+          <li>Someone is trying to re- build Innsmouth after the Delta Green fiasco  </li>
+          <li>the adventures are caught in a storm and have to keep dry in a diner (but what were those noises coming from the woods)</li>
+          <li> A new horror film has come out and everyone is telling you how scary it is. You go to see it
+and it's one of the most terrifying experiences of your life, the monsters just looked so real!</li>
+          <li>  An overwhelming sense of paranoia leads one of the party to the conclusion that there is a
+mole within the party leaking info to the denizens of Chaos. Is it all a twisted hallucination, is the PC
+carrying a psychic manitou/Shan?</li>
+          <li> They are given an artifact that they “must guard with their lives”</li>
+          <li> Someone offers to interpret their dreams</li>
+          <li> They see a recruitment advertisement for Delta-Green. When they apply, no-one is home.</li>
+          <li> *THE*STARS*ARE*RIGHT* (Elder God apocalypse)</li>
           </ol>
+          <script>
+                     function display(){
+       
+       function myFunction2() {
+    var x = document.getElementById("displayCoC")
+    x.innerHTML = Math.floor((Math.random() * 100) + 1);
+}
+}
+          </script>
           </head>
         </html>
       </div>
@@ -376,7 +638,10 @@ button100.onclick = function() {
                $(".screen").hide();
                $("#screen4").show();
            })
-           
+           $("#link5").on("click", function(){
+               $(".screen").hide();
+               $("#screen5").show();
+           })
        
     </script>
     
